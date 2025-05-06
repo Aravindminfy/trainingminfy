@@ -31,3 +31,9 @@ To resolve the conflict:
   `"Resolved merge conflict and added both subtract and multiply methods."`
 
 As a result, both branches were successfully merged into the `main` branch, and all conflicts were resolved.
+
+# Husky
+- Husky is a tool that automates tasks in git workflow.
+- It is very small in size around 2kb
+- It makes sure that the developer is not making mistakes before the commit , as it checks everytime all the necessary conditions are saticified and follows.
+- It works by creating a script file in the folder named `.husky ` in the project and this is tied to git hooks and executes sqecific command when triggered.
