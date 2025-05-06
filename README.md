@@ -13,15 +13,21 @@ https://github.com/Aravindminfy/trainingminfy
 # Final Merged branchs 
 ![image](https://github.com/user-attachments/assets/e32d1c87-c183-4a2f-8227-8bb65c707173)
 
+### Brief Explanation of How the Git Conflict Was Resolved
 
-# Brief Explanation of How the Git Conflict Was Resolved
-* A Git conflict occurs when two branches modify the same part of a file and Git can’t decide which change to keep during a merge.
+A Git conflict occurs when two branches modify the same part of a file, and Git cannot automatically decide which change to keep during a merge.
 
-Here in my code : <br>
- feature-subtract added a subtract() method.
+In my case:
 
- feature-multiply added a multiply() method.
+- The `feature-subtract` branch added a `subtract()` method.
+- The `feature-multiply` branch added a `multiply()` method.
+- Both branches made changes in the same location in `calculator.py` (just after the `add()` method), which caused a merge conflict.
 
-* Both branches edited the same place in calculator.py (after the add() method), so Git couldn't automatically merge them.
+To resolve the conflict:
 
-* I manually resolved all the conflicts by removing the extra lines, or by using VS Code's GUI to select 'Accept Both Changes'
+- I manually edited the file to remove the conflict markers and kept both the `subtract()` and `multiply()` methods.
+- Alternatively, this could have been done using the VS Code merge tool (by selecting **Current + Incoming** and completing the merge).
+- I then committed the resolved code to the `main` branch with the message:  
+  `"Resolved merge conflict and added both subtract and multiply methods."`
+
+As a result, both branches were successfully merged into the `main` branch, and all conflicts were resolved.
